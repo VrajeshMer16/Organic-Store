@@ -1,0 +1,650 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home - Organic Store</title>
+
+  <link rel="shortcut icon" href="/images/organic-favicon-free-img.png" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/brands.min.css" integrity="sha512-EJp8vMVhYl7tBFE2rgNGb//drnr1+6XKMvTyamMS34YwOEFohhWkGq13tPWnK0FbjSS6D8YoA3n3bZmb3KiUYA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <!-- https://websitedemos.net/organic-shop-02/ -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --merri: 'Merriweather';
+      --theme: #8BC34A;
+    }
+
+    ::selection {
+      background: var(--theme);
+      color: black;
+    }
+
+    .cardhover:hover {
+      box-shadow: 1px 1px 10px rgb(150, 150, 150);
+    }
+
+    nav li {
+      padding: 1em;
+    }
+
+    .hover1 {
+      transition: 0.5s;
+    }
+
+    .hover1:hover {
+      background-color: #8BC34A !important;
+    }
+  </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-white">
+    <div class="container-fluid m-2">
+      <img src="/images/organic-store-logo5.svg" width="150" alt="logo" />
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-1 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Everything</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">Groceries</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">Juice</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav me-0 mb-2 mb-lg-0 ">
+          <li class="nav-item">
+            <a class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="color: var(--theme);"><strong>&pound;0.00</strong></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link h-sm-100px" style="height: 7vh; width: 4vw; fill: var(--theme); "><svg height="100%"
+                width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                id="ast-basket-icon-svg" x="0px" y="0px" width="100" height="100" viewBox="826 826 140 140"
+                enable-background="new 826 826 140 140" xml:space="preserve">
+                <path
+                  d="M955.418,887.512c2.344,0,4.343,0.829,6.002,2.486c1.657,1.659,2.486,3.659,2.486,6.002c0,2.343-0.829,4.344-2.486,6.001  c-1.659,1.658-3.658,2.487-6.002,2.487h-0.994l-7.627,43.9c-0.354,2.033-1.326,3.713-2.917,5.04  c-1.593,1.326-3.405,1.989-5.438,1.989h-84.883c-2.033,0-3.846-0.663-5.438-1.989c-1.591-1.327-2.564-3.007-2.918-5.04l-7.626-43.9  h-0.995c-2.343,0-4.344-0.829-6.001-2.487c-1.658-1.657-2.487-3.658-2.487-6.001c0-2.343,0.829-4.343,2.487-6.002  c1.658-1.658,3.659-2.486,6.001-2.486H955.418z M860.256,940.563c1.149-0.089,2.111-0.585,2.885-1.491  c0.773-0.907,1.116-1.936,1.028-3.085l-2.122-27.586c-0.088-1.15-0.585-2.111-1.492-2.885c-0.906-0.774-1.934-1.117-3.083-1.028  c-1.149,0.088-2.111,0.586-2.885,1.492s-1.116,1.934-1.028,3.083l2.122,27.587c0.088,1.105,0.542,2.034,1.359,2.785  c0.818,0.752,1.78,1.128,2.885,1.128H860.256z M887.512,936.319v-27.587c0-1.149-0.42-2.144-1.26-2.984  c-0.84-0.84-1.834-1.26-2.984-1.26s-2.144,0.42-2.984,1.26c-0.84,0.841-1.26,1.835-1.26,2.984v27.587c0,1.149,0.42,2.145,1.26,2.984  c0.84,0.84,1.835,1.26,2.984,1.26s2.144-0.42,2.984-1.26C887.092,938.464,887.512,937.469,887.512,936.319z M912.977,936.319  v-27.587c0-1.149-0.42-2.144-1.26-2.984c-0.841-0.84-1.835-1.26-2.984-1.26s-2.145,0.42-2.984,1.26  c-0.84,0.841-1.26,1.835-1.26,2.984v27.587c0,1.149,0.42,2.145,1.26,2.984s1.835,1.26,2.984,1.26s2.144-0.42,2.984-1.26  C912.557,938.464,912.977,937.469,912.977,936.319z M936.319,936.65l2.122-27.587c0.088-1.149-0.254-2.177-1.027-3.083  s-1.735-1.404-2.885-1.492c-1.15-0.089-2.178,0.254-3.084,1.028c-0.906,0.773-1.404,1.734-1.492,2.885l-2.122,27.586  c-0.088,1.149,0.254,2.178,1.027,3.085c0.774,0.906,1.736,1.402,2.885,1.491h0.332c1.105,0,2.066-0.376,2.885-1.128  C935.777,938.685,936.23,937.756,936.319,936.65z M859.66,855.946l-6.167,27.322h-8.753l6.698-29.245  c0.84-3.89,2.807-7.062,5.902-9.516c3.095-2.453,6.632-3.68,10.611-3.68h11.074c0-1.149,0.42-2.144,1.26-2.984  c0.84-0.84,1.835-1.26,2.984-1.26h25.465c1.149,0,2.144,0.42,2.984,1.26c0.84,0.84,1.26,1.834,1.26,2.984h11.074  c3.979,0,7.516,1.227,10.611,3.68c3.094,2.454,5.062,5.626,5.901,9.516l6.697,29.245h-8.753l-6.168-27.322  c-0.486-1.945-1.491-3.537-3.017-4.774c-1.525-1.238-3.282-1.857-5.272-1.857h-11.074c0,1.15-0.42,2.144-1.26,2.984  c-0.841,0.84-1.835,1.26-2.984,1.26h-25.465c-1.149,0-2.144-0.42-2.984-1.26c-0.84-0.84-1.26-1.834-1.26-2.984h-11.074  c-1.99,0-3.747,0.619-5.272,1.857C861.152,852.409,860.146,854,859.66,855.946z">
+                </path>
+              </svg></a>
+          </li>
+          <li>
+            <a class="nav-link " style="height: 7vh; width: 4vw; ">
+              <svg height="100%" width="100%" version="1.1" class="account-icon" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 120 120"
+                enable-background="new 0 0 120 120" xml:space="preserve">
+                <path
+                  d="M84.6,62c-14.1,12.3-35.1,12.3-49.2,0C16.1,71.4,3.8,91,3.8,112.5c0,2.1,1.7,3.8,3.8,3.8h105c2.1,0,3.8-1.7,3.8-3.8 C116.2,91,103.9,71.4,84.6,62z">
+                </path>
+                <circle cx="60" cy="33.8" r="30"></circle>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- second section -->
+
+  <div class="container-fluid  overflow-hidden"
+    style="padding: 5em 0 0em 0; background-color: #f8f6f3; position: relative;">
+
+    <img src="images/leaves-free-img.png" height="250" style="position: absolute;
+      right: 0; bottom: 0; opacity: 0.4;">
+
+    <div class="row">
+
+      <div class="col-lg-6 col-sm-12 p-3 pt-2 pb-2">
+        <img src="images/organic-products-hero.png" height="90% ">
+      </div>
+
+      <div class="col-lg-6 col-sm-12 " style="padding: 0em 4em 0em 4em; ">
+        <img style="transform: rotate(-20deg);" src="images/leaves-free-img.png" alt="leaves" height="60">
+        <h5 style="line-height: 3em ; margin: .3em 0em;"> Best Quality Products</h5>
+        <h1 style=" font-size: 3.25rem; font-family: merriweather; font-weight: bold; margin: .3em 0em;"> Join The
+          Organic Movement!</h1>
+        <p style="margin: .3em 0em;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec
+          ullamcorper mattis.</p>
+
+        <div class="hover1"
+          style="border-radius: .5em; background-color: #6d983b;  width: auto; display: inline-block; padding: 1em 2.5em; margin: 1.5em 0em;">
+          <i class="fa-solid fa-cart-shopping" style="color: white; margin-right: .7em;"></i>
+          <a href="#" style="text-decoration: none; color: white;">SHOP NOW</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- cards section -->
+
+  <div class="container-fluid py-5 justify-content-center" style="background-color: #111;">
+    <div class="row d-flex justify-content-center text-center gap-2 mx-auto" style="width: 95%;">
+
+      <!-- card - 1 -->
+      <div class="col-lg p-3 py-4 mx-2 w-25 d-flex justify-content-between align-items-center rounded"
+        style="background: #333;color: white; ">
+        <i aria-hidden="true" class="fas fa-truck px-3 "
+          style="vertical-align: middle;text-align: center;  font-size: 1.7em; color: var(--theme);"></i>
+        <div class="textcard px-3">
+          <h5 style="font-family: merriweather;font-weight: bold; margin-bottom: 0;">Free
+            Shipping</h5>
+          <p style="font-size:large;">Above $5 Only</p>
+
+        </div>
+      </div>
+
+      <!-- card - 2 -->
+      <div class="col-lg p-3 py-4 mx-2 w-25 d-flex justify-content-between align-items-center rounded"
+        style="background: #333;color: white; ">
+        <i aria-hidden="true" class="fas fa-truck px-3 "
+          style="vertical-align: middle;text-align: center;  font-size: 1.7em; color: var(--theme);"></i>
+        <div class="textcard px-3">
+          <h5 style="font-family: merriweather;font-weight: bold; margin-bottom: 0;">Free
+            Shipping</h5>
+          <p style="font-size:large;">Above $5 Only</p>
+
+        </div>
+      </div>
+
+      <!-- card - 3 -->
+      <div class="col-lg p-3 py-4 mx-2 w-25 d-flex justify-content-between align-items-center rounded"
+        style="background: #333;color: white; ">
+        <i aria-hidden="true" class="fas fa-truck px-3 "
+          style="vertical-align: middle;text-align: center;  font-size: 1.7em; color: var(--theme);"></i>
+        <div class="textcard px-3">
+          <h5 style="font-family: merriweather;font-weight: bold; margin-bottom: 0;">Free
+            Shipping</h5>
+          <p style="font-size:large;">Above $5 Only</p>
+
+        </div>
+      </div>
+
+      <!-- card - 4 -->
+      <div class="col-lg p-3 py-4 mx-2 w-25 d-flex justify-content-between align-items-center rounded"
+        style="background: #333;color: white; ">
+        <i aria-hidden="true" class="fas fa-truck px-3 "
+          style="vertical-align: middle;text-align: center;  font-size: 1.7em; color: var(--theme);"></i>
+        <div class="textcard px-3">
+          <h5 style="font-family: merriweather;font-weight: bold; margin-bottom: 0;">Free
+            Shipping</h5>
+          <p style="font-size:large;">Above $5 Only</p>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- Best Selling Products section -->
+
+  <div class="container" style="max-width:95%; padding: 8em 0em 8em;">
+    <div class="row">
+      <div class="col-12 text-center position-relative">
+        <h2 style="font-family: 'Merriweather'; font-weight: bold;">Best Selling Products</h2>
+        <img style="transform: rotate(-20deg); margin:1em 0 2em;" src="/images/leaves-free-img.png" alt="leaves"
+          height="60">
+      </div>
+    </div>
+
+    <div class="row text-center">
+
+      <div class="col-lg-3 col-md-6 col-12" style="color: #333;">
+        <a href="#" style="text-decoration: none;"><img src="/images/coffee.jpg" style=" padding-bottom: 0.7em;" alt=""
+            width="100%"></a>
+        <div>
+          <p style="margin-bottom: 0.5em;">Groceries</p>
+          <a href="#" style="text-decoration: none;">
+            <h6 style="color: #111;font-weight: bold; font-family: 'Merriweather';">Assorted Coffee</h6>
+          </a>
+          <div>
+            <span class="fa-regular fa-star" style="color: #666; letter-spacing: -5px;"></span>
+            <span class="fa-regular fa-star" style="color: #666; letter-spacing: -5px;"></span>
+            <span class="fa-regular fa-star" style="color: #666; letter-spacing: -5px;"></span>
+            <span class="fa-regular fa-star" style="color: #666; letter-spacing: -5px;"></span>
+            <span class="fa-regular fa-star" style="color: #666; letter-spacing: -5px;"></span>
+          </div>
+          <div>
+            <span style="font-weight: bold;"> &pound; 35.00</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-12" style="color: #333;">
+        <a href="#" style="text-decoration: none;"><img src="/images/sanitizer.jpg" style=" padding-bottom: 0.7em;"
+            alt="" width="100%"></a>
+        <div>
+          <p style="margin-bottom: 0.5em;">Groceries</p>
+          <a href="#" style="text-decoration: none;">
+            <h6 style="color: #111;font-weight: bold; font-family: 'Merriweather';">Hand Sanitizer</h6>
+          </a>
+          <div>
+            <span class="fa-regular fa-star" style="color: #666; letter-spacing: -5px;"></span>
+            <span class="fa-regular fa-star" style="color: #666; letter-spacing: -5px;"></span>
+            <span class="fa-regular fa-star" style="color: #666; letter-spacing: -5px;"></span>
+            <span class="fa-regular fa-star" style="color: #666; letter-spacing: -5px;"></span>
+            <span class="fa-regular fa-star" style="color: #666; letter-spacing: -5px;"></span>
+          </div>
+          <div>
+            <span style="font-weight: bold;"> &pound; 15.00</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-12" style="color: #333;">
+        <a href="#" style="text-decoration: none;"><img src="/images/red-chillies.jpg" style=" padding-bottom: 0.7em;"
+            alt="" width="100%"></a>
+        <div>
+          <p style="margin-bottom: 0.5em;">Groceries</p>
+          <a href="#" style="text-decoration: none;">
+            <h6 style="color: #111;font-weight: bold; font-family: 'Merriweather';">Handpicked Red Chillies</h6>
+          </a>
+          <div>
+            <span class="fa-regular fa-star" style="color: #666; letter-spacing: -5px;"></span>
+            <span class="fa-regular fa-star" style="color: #666; letter-spacing: -5px;"></span>
+            <span class="fa-regular fa-star" style="color: #666; letter-spacing: -5px;"></span>
+            <span class="fa-regular fa-star" style="color: #666; letter-spacing: -5px;"></span>
+            <span class="fa-regular fa-star" style="color: #666; letter-spacing: -5px;"></span>
+          </div>
+          <div>
+            <span style="font-weight: bold;"> &pound; 19.00</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-12" style="color: #333;">
+        <a href="#" style="text-decoration: none;"><img src="/images/edible-oil.jpg" style=" padding-bottom: 0.7em;"
+            alt="" width="100%"></a>
+        <div>
+          <p style="margin-bottom: 0.5em;">Groceries</p>
+          <a href="#" style="text-decoration: none;">
+            <h6 style="color: #111;font-weight: bold; font-family: 'Merriweather';">Natural Extracted Edible Oil
+            </h6>
+          </a>
+          <div>
+            <span class="fa-regular fa-star" style="color: #666; letter-spacing: -5px;"></span>
+            <span class="fa-regular fa-star" style="color: #666; letter-spacing: -5px;"></span>
+            <span class="fa-regular fa-star" style="color: #666; letter-spacing: -5px;"></span>
+            <span class="fa-regular fa-star" style="color: #666; letter-spacing: -5px;"></span>
+            <span class="fa-regular fa-star" style="color: #666; letter-spacing: -5px;"></span>
+          </div>
+          <div>
+            <del style="font-weight: bold; color: #999; text-decoration: line-through;"> &pound; 35.00</del>
+            <span style="font-weight: bold;"> &pound; 25.00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4th section -->
+
+  <div class="container-fluid position-relative" style=" padding: 7em 2em 7em;background: rgb(248 246 243);">
+
+    <img src="/images/basil-leaf.png" alt="basil-leaf" height="70"
+      style="position: absolute; top: 0; left: 50%;transform: translate(-50%,-50%);">
+    <div class="row">
+
+      <!-- card-1 -->
+      <div class=" col-lg-4 col-md-12 col-12 bg-white mx-auto cardhover"
+        style="border-radius: .5em;background-size:72%; background-repeat: no-repeat; background-position: bottom right;background-image: url('images/lemon.jpg');height: 65vh; width: 30%; padding: 2em;">
+
+        <h4 style="font-family: var(--merri);font-weight: bold;">Farm Fresh Fruits</h4>
+        <p>Ut sollicitudin quam vel purus tempus, vel eleifend felis varius.</p>
+        <div class="hover1"
+          style="border-radius: .3em;font-weight: bold; font-size: 1rem; background-color: #6A9737;  width: auto; display: inline-block; padding: .7em 2.2em; margin: 1.5em 0em;">
+          <a href="#" style="text-decoration: none; color: white;">SHOP NOW</a>
+          <i aria-hidden="true" class="fas fa-arrow-right" style="color: white;"></i>
+        </div>
+      </div>
+
+      <!-- card-2 -->
+      <div class=" col-lg-4 col-md-12 col-12 bg-white mx-auto cardhover"
+        style="border-radius: .5em; background-size:72%; background-repeat: no-repeat; background-position: bottom right;background-image: url('images/cabbage.jpg');height: 65vh; width: 30%; padding: 2em; ">
+        <h4 style="font-family: var(--merri); font-weight: bold;">Farm Fresh Fruits</h4>
+        <p>Ut sollicitudin quam vel purus tempus, vel eleifend felis varius.</p>
+        <div class="hover1"
+          style="border-radius: .3em;font-weight: bold; font-size: 1rem; background-color: #6A9737;  width: auto; display: inline-block; padding: .7em 2.2em; margin: 1.5em 0em;">
+          <a href="#" style="text-decoration: none; color: white;">SHOP NOW</a>
+          <i aria-hidden="true" class="fas fa-arrow-right" style="color: white;"></i>
+        </div>
+      </div>
+
+      <!-- card-3 -->
+      <div class=" col-lg-4 col-md-12 col-12 bg-white mx-auto cardhover"
+        style="border-radius: .5em;background-size:72%; background-repeat: no-repeat; background-position: bottom right;background-image: url('images/peanuts.jpg');height: 65vh; width: 30%; padding: 2em;">
+
+        <h4 style="font-family: var(--merri);font-weight: bold;">Farm Fresh Fruits</h4>
+        <p>Ut sollicitudin quam vel purus tempus, vel eleifend felis varius.</p>
+        <div class="hover1"
+          style="border-radius: .3em;font-weight: bold; font-size: 1rem; background-color: #6A9737;  width: auto; display: inline-block; padding: .7em 2.2em; margin: 1.5em 0em;">
+          <a href="#" style="text-decoration: none; color: white;">SHOP NOW</a>
+          <i aria-hidden="true" class="fas fa-arrow-right" style="color: white;"></i>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 5th section [get 25% off]-->
+
+  <div class="container-fluid bg-black h-auto d-inline-block p-5 " style="position: relative;">
+    <img src="images/arrow-down-filled-triangle.png" alt="" height="30"
+      style="position: absolute; bottom: -10%; left: 50%; z-index: 10;">
+    <h2
+      style="color: white;font-family: var(--merri); float: left; vertical-align: middle;margin-bottom: 0; margin: auto 0; line-height: 1.8em;">
+      Get 25% Off On Your First Purchase!</h2>
+    <div class="hover1 "
+      style="vertical-align: middle; float:right; border-radius: .5em; background-color: #6d983b;  width: auto; display: inline-block; padding: 1em 2.5em;">
+      <i class="fa-solid fa-cart-shopping" style="color: white; margin-right: .7em;"></i>
+      <a href="#" style="text-decoration: none; color: white;">SHOP NOW</a>
+    </div>
+  </div>
+
+  <!-- 6th section -->
+
+  <div class="container-fluid p-3" style="position: relative; background: rgb(248 246 243);text-align: center;">
+    <h4 style="font-family: var(--merri); font-weight: bold;">Try It For Free. No Registration Needed.</h4>
+  </div>
+
+  <!-- Trending Products -->
+
+  <div class="container" style="max-width:95%; padding: 8em 0em 8em;">
+    <div class="row">
+      <div class="col-12 text-center position-relative">
+        <h2 style="font-family: 'Merriweather'; font-weight: bold;">Trending Products</h2>
+        <img style="transform: rotate(-20deg); margin:1em 0 2em;" src="/images/leaves-free-img.png" alt="leaves"
+          height="60">
+      </div>
+    </div>
+
+    <div class="row text-center">
+
+      <div class="col-lg-3 col-md-6 col-12" style="color: #333;">
+        <a href="#" style="text-decoration: none;"><img src="/images/coffee.jpg" style=" padding-bottom: 0.7em;" alt=""
+            width="100%"></a>
+        <div>
+          <p style="margin-bottom: 0.5em;">Groceries</p>
+          <a href="#" style="text-decoration: none;">
+            <h6 style="color: #111;font-weight: bold; font-family: 'Merriweather';">Assorted Coffee</h6>
+          </a>
+          <div>
+            <span class="fa-regular fa-star" style="color: #666; letter-spacing: -5px;"></span>
+            <span class="fa-regular fa-star" style="color: #666; letter-spacing: -5px;"></span>
+            <span class="fa-regular fa-star" style="color: #666; letter-spacing: -5px;"></span>
+            <span class="fa-regular fa-star" style="color: #666; letter-spacing: -5px;"></span>
+            <span class="fa-regular fa-star" style="color: #666; letter-spacing: -5px;"></span>
+          </div>
+          <div>
+            <span style="font-weight: bold;"> &pound; 35.00</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-12" style="color: #333;">
+        <a href="#" style="text-decoration: none;"><img src="/images/oragejuice.jpg" style=" padding-bottom: 0.7em;"
+            alt="" width="100%"></a>
+        <div>
+          <p style="margin-bottom: 0.5em;">Groceries</p>
+          <a href="#" style="text-decoration: none;">
+            <h6 style="color: #111;font-weight: bold; font-family: 'Merriweather';">Fresh Orange Juice
+            </h6>
+          </a>
+          <div>
+            <span class="fa-regular fa-star" style="color: #666; letter-spacing: -5px;"></span>
+            <span class="fa-regular fa-star" style="color: #666; letter-spacing: -5px;"></span>
+            <span class="fa-regular fa-star" style="color: #666; letter-spacing: -5px;"></span>
+            <span class="fa-regular fa-star" style="color: #666; letter-spacing: -5px;"></span>
+            <span class="fa-regular fa-star" style="color: #666; letter-spacing: -5px;"></span>
+          </div>
+          <div>
+            <span style="font-weight: bold;"> &pound; 25.00</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-12" style="color: #333;">
+        <a href="#" style="text-decoration: none;"><img src="/images/sanitizer.jpg" style=" padding-bottom: 0.7em;"
+            alt="" width="100%"></a>
+        <div>
+          <p style="margin-bottom: 0.5em;">Groceries</p>
+          <a href="#" style="text-decoration: none;">
+            <h6 style="color: #111;font-weight: bold; font-family: 'Merriweather';">Hand Sanitizer</h6>
+          </a>
+          <div>
+            <span class="fa-regular fa-star" style="color: #666; letter-spacing: -5px;"></span>
+            <span class="fa-regular fa-star" style="color: #666; letter-spacing: -5px;"></span>
+            <span class="fa-regular fa-star" style="color: #666; letter-spacing: -5px;"></span>
+            <span class="fa-regular fa-star" style="color: #666; letter-spacing: -5px;"></span>
+            <span class="fa-regular fa-star" style="color: #666; letter-spacing: -5px;"></span>
+          </div>
+          <div>
+            <span style="font-weight: bold;"> &pound; 15.00</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 col-12" style="color: #333;">
+        <a href="#" style="text-decoration: none;"><img src="/images/red-chillies.jpg" style=" padding-bottom: 0.7em;"
+            alt="" width="100%"></a>
+        <div>
+          <p style="margin-bottom: 0.5em;">Groceries</p>
+          <a href="#" style="text-decoration: none;">
+            <h6 style="color: #111;font-weight: bold; font-family: 'Merriweather';">Handpicked Red Chillies</h6>
+          </a>
+          <div>
+            <span class="fa-regular fa-star" style="color: #666; letter-spacing: -5px;"></span>
+            <span class="fa-regular fa-star" style="color: #666; letter-spacing: -5px;"></span>
+            <span class="fa-regular fa-star" style="color: #666; letter-spacing: -5px;"></span>
+            <span class="fa-regular fa-star" style="color: #666; letter-spacing: -5px;"></span>
+            <span class="fa-regular fa-star" style="color: #666; letter-spacing: -5px;"></span>
+          </div>
+          <div>
+            <span style="font-weight: bold;"> &pound; 19.00</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="container-fluid h-auto" style="background-color: #f8f6f3; padding: 2em 0 0em 0; position: relative;">
+
+    <img src="images/leaves-free-img.png" height="300" style="position: absolute;
+      left: 0; top: 0;transform: rotateY(180deg); opacity: 0.4;">
+    <div class="container " style="max-width: 97%;">
+      <div class="row text-center m-3 ">
+        <h1 class="my-3 fontheading"> Customers Reviews</h1>
+        <img style="transform: rotate(-20deg); width: 10%; " src="/images/leaves-free-img.png" alt="leaves"
+          class="mx-auto mt-2 mb-2">
+      </div>
+      <div class="row d-flex align-items-end">
+
+        <!-- 1st review card -->
+        <div class="col-lg-3 col-md-6 col-12 mx-auto shadow p-5 bg-white text-center">
+          <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+          <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+          <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+          <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+          <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+          <p>Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+            tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+
+          <div class="peoplename d-flex justify-content-center align-items-center">
+            <img src="images/client02-free-img.png" class="m-2 rounded-circle" alt="client">
+            <p class="m-2">Mila Kunis</p>
+          </div>
+        </div>
+
+        <!-- 2nd review card -->
+        <!-- background: url(https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2019/06/sydney-rae-668606-unsplash.jpg); -->
+        <div class="col-lg-3 col-md-6 col-12 mx-auto justify-content-space-around shadow rounded text-center "
+          style="background: url(https://websitedemos.net/organic-shop-02/wp-content/uploads/sites/465/2019/06/sydney-rae-668606-unsplash.jpg) ; background-size: cover;position: relative;height: 70vh;">
+
+          <div class=" overlay rounded p-4 d-flex flex-column align-items-center">
+
+            <h2 class="fontheading text-white my-2 "> Deal Of The Day 15% Off On All Vegetables!</h2>
+            <p class="text-white my-3">I am text block. Click edit button to change this tex em ips.</p>
+            <div class="hover1 mt-5 "
+              style="vertical-align: middle; border-radius: .5em; background-color: #6d983b;  width: auto; display: inline-block; padding: 1em 2.5em;">
+              <i aria-hidden="true" class="fas fa-arrow-right" style="color: white;"></i>
+              <a href="#" style="text-decoration: none; color: white;">SHOP NOW</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3rd review card -->
+        <div class="col-lg-3 col-md-6 col-12 shadow p-5 mx-auto bg-white text-center">
+          <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+          <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+          <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+          <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+          <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+          <p>Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+            tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+          <div class="peoplename d-flex justify-content-center align-items-center">
+            <img src="images/client01-free-img.png" class="m-2 rounded-circle" alt="client">
+            <p class="m-2">Mike Sendler</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row " style="margin: 8em 0em 2em 0em;">
+        <div class="col-12">
+          <span class="fontheading h5 fw-bold float-right">Featured Brands:</span>
+
+          <img src="images/logo-1.svg" class="mx-2" alt="" style="max-width: 20vw;">
+          <img src="images/logo-2.svg" class="mx-2" alt="" style="max-width: 20vw;">
+          <img src="images/logo-3.svg" class="mx-2" alt="" style="max-width: 20vw;">
+          <img src="images/logo-4.svg" class="mx-2" alt="" style="max-width: 20vw;">
+          <img src="images/logo-5.svg" class="mx-2" alt="" style="max-width: 20vw;">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid " style="background-color: #111;padding: 3em;">
+    <div class="row">
+      <!-- 1st part of footer -->
+      <div class="col-6 ">
+        <img src="images/organic-store-white-logo.png" alt="">
+        <p class="textcolorgrey py-5">Maecenas mi justo, interdum at consectetur vel, tristique et arcu. Ut quis eros blandit,
+          ultrices diam in, elementum ex. Suspendisse quis faucibus urna. Suspendisse pellentesque.</p>
+      </div>
+      <!-- 2nd part of footer -->
+      <div class="col-3 ">
+        <h3 class="fontheading my-3 mb-5 textcolorgrey" >Quick Links</h3>
+        <ul class="list-group " style="line-height: 0.5;">
+
+          <li class="list-group-item ps-0" style="background-color: #111; border: none; "><a href="#" class="  text-decoration-none textcolorgrey"> About</a></li>
+          <li class="list-group-item ps-0" style="background-color: #111; border: none; "><a href="#" class="  text-decoration-none textcolorgrey"> Cart</a></li>
+          <li class="list-group-item ps-0" style="background-color: #111; border: none; "><a href="#" class="  text-decoration-none textcolorgrey"> Checkout</a></li>
+          <li class="list-group-item ps-0" style="background-color: #111; border: none; "><a href="#" class="  text-decoration-none textcolorgrey"> Contact</a></li>
+          <li class="list-group-item ps-0" style="background-color: #111; border: none; "><a href="#" class="  text-decoration-none textcolorgrey"> Home</a></li>
+          <li class="list-group-item ps-0" style="background-color: #111; border: none; "><a href="#" class="  text-decoration-none textcolorgrey"> My account</a></li>
+          <li class="list-group-item ps-0" style="background-color: #111; border: none; "><a href="#" class="  text-decoration-none textcolorgrey"> Shop</a></li>
+        </ul>
+
+        <h3 class="fontheading my-4 textcolorgrey">Site Links</h3>
+        <ul class="list-group " style="line-height: 0.5;">
+          <li class="list-group-item ps-0 " style="background-color: #111; border: none;">
+            <a href="#" class=" text-decoration-none textcolorgrey">Site Links</a>
+          </li>
+          <li class="list-group-item ps-0 " style="background-color: #111; border: none;">
+            <a href="#" class=" text-decoration-none textcolorgrey">Privacy Policy</a>
+          </li>
+          <li class="list-group-item ps-0 " style="background-color: #111; border: none;">
+            <a href="#" class=" text-decoration-none textcolorgrey">Shipping Details</a>
+          </li>
+          <li class="list-group-item ps-0 " style="background-color: #111; border: none;">
+            <a href="#" class=" text-decoration-none textcolorgrey">Offers Coupons</a>
+          </li>
+          <li class="list-group-item ps-0 " style="background-color: #111; border: none;">
+            <a href="#" class=" text-decoration-none textcolorgrey">Terms & Conditions</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 3rd part of footer -->
+      <div class="col-3 fontheading textcolorgrey">
+        <h3 class="mb-5"> Download Our Mobile App</h3>
+        <p >  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquam gravida sollicitudin. Praesent porta
+          enim mi, non tincidunt libero interdum sit amet.</p>
+
+          <h3 class="fontheading my-4">Site Links</h3>
+        <ul class="list-group textcolorgrey " style="line-height: 0.5;">
+
+          <li class="list-group-item ps-0 " style="background-color: #111; border: none;">
+            <a href="#" class=" text-decoration-none textcolorgrey">Know More About Us</a>
+          </li>
+          <li class="list-group-item ps-0 " style="background-color: #111; border: none;">
+            <a href="#" class=" text-decoration-none textcolorgrey">Visit Store</a>
+          </li>
+          <li class="list-group-item ps-0 " style="background-color: #111; border: none;">
+            <a href="#" class=" text-decoration-none textcolorgrey">Let’s Connect</a>
+          </li>
+          <li class="list-group-item ps-0 " style="background-color: #111; border: none;">
+            <a href="#" class=" text-decoration-none textcolorgrey">Locate Stores</a>
+          </li>
+        </ul>
+          
+
+      </div>
+    </div>
+  </div>
+ 
+  
+  <div class="container-fluid textcolorgrey p-4 d-flex justify-content-between" style="background-color: #111;">
+    <p>Copyright &copy; | Organic Store</p>
+    
+    <ul style="list-style-type: none;" class="d-flex justify-content-end">
+      <li>
+        <a href="#" class="text-decoration-none"><i class="fa-brands fa-instagram p-3" style="color: #f8f6f3;"></i></a>
+      </li>
+      <li>
+        <a href="#" class="text-decoration-none"><i class="fa-brands fa-twitter p-3" style="color: #f8f6f3;"></i></a>
+      </li>
+      <li>
+        <a href="#" class="text-decoration-none"><i class="fa-brands fa-facebook p-3" style="color: #f8f6f3;"></i></a>
+      </li>
+      <li>
+        <a href="#" class="text-decoration-none"><i class="fa-brands fa-github p-3" style="color: #f8f6f3;"></i></a>
+      </li>
+    </ul>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
